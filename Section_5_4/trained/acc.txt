@@ -1,0 +1,8 @@
+3layer: 92.74
+4layer: 89.16
+5layer: 86.70
+big: 95.84
+
+convsmall: 98.54
+convmed: 99.17
+convbig: 98.9
