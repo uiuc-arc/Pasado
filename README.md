@@ -9,6 +9,17 @@ Differentiation in a way that abstracts all the nonlinear operations of each res
 
 Please find the most updated version of our artifact at [this GitHub repository](https://github.com/uiuc-arc/Pasado).
 
+## Quick Navigation
+
+- [Code Documentation](#code-documentation)
+- [Requirements](#requirements)
+- [Directory Structure](#directory-structure)
+- [Getting Started](#getting-started)
+- [Section 5.2 & Example](#validating-section-52-experiments-and-example)
+- [Section 5.3](#validating-section-53-experiments)
+- [Section 5.4](#validating-section-54-experiments)
+- [Section 5.5](#validating-section-55-experiments)
+
 ## Code Documentation
 
 A complete description of the source files and their functionality is provided in a separate
