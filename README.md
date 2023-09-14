@@ -93,8 +93,8 @@ cd Section_5_2/img
 To view these figures we recommend the following commands:
 
 ```bash
-open climate_step.jpg  # corresponds to Fig 3
-open climate_scatter.jpg  # corresponds to Fig. 4b
+eog climate_step.jpg  # corresponds to Fig 3
+eog climate_scatter.jpg  # corresponds to Fig. 4b
 ``` 
 
 Where climate_step.jpg corresponds to Fig 3 of the paper (in the Example section) and climate_scatter.jpg corresponds to
@@ -133,8 +133,8 @@ cd Section_5_2/img
 To view the figures for the chemical ODE experimental results, we recommend the following commands:
 
 ```bash
-open chemical_step.jpg  # corresponds to Fig. 5
-open chemical_scatter.jpg  # corresponds to (a subset of) Fig. 4a
+eog chemical_step.jpg  # corresponds to Fig. 5
+eog chemical_scatter.jpg  # corresponds to (a subset of) Fig. 4a
 ``` 
 
 Where `chemical_step.jpg` shows the results of Fig. 5 and `chemical_scatter.jpg` shows the results of Fig 4a. Note that
@@ -208,7 +208,7 @@ cd Section_5_3/img
 To view the results we recommend the following command:
 
 ```bash
-open black_scholes_rev.jpg  # corresponds to Fig. 6
+eog black_scholes_rev.jpg  # corresponds to Fig. 6
 ``` 
 
 This plot shows the results as described in Fig. 6 of the paper.
@@ -394,7 +394,7 @@ cd Section_5_5/img
 To view the results we recommend the following command:
 
 ```bash
-open adult.jpg  # corresponds to Fig. 10
+eog adult.jpg  # corresponds to Fig. 10
 ``` 
 
 This plot shows the results as described in Fig. 10 of the paper.
