@@ -9,6 +9,11 @@ Differentiation in a way that abstracts all the nonlinear operations of each res
 
 Please find the most updated version of our artifact at [this GitHub repository](https://github.com/uiuc-arc/Pasado).
 
+## Code Documentation
+
+A complete description of the source files and their functionality is provided in a separate
+document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.pdf).
+
 ## Requirements
 
 The artifact is built on the following requirements:
@@ -43,7 +48,7 @@ IPython: 8.14.0 (should also work for 5.8.0 or greater)
 ## Directory Structure
 
 The main directory is:  `~/Desktop/artifact`. Inside the `artifact` folder are the following
-sub-directories: `Section_5_2`, `Section_5_3`,  `Section_5_4`, `Section_5_5`, `forward_mode_non_tensorized_src`, `forward_mode_tensorized_src`, `reverse_mode_non_tensorized_src`.
+subdirectories: `Section_5_2`, `Section_5_3`,  `Section_5_4`, `Section_5_5`, `forward_mode_non_tensorized_src`, `forward_mode_tensorized_src`, `reverse_mode_non_tensorized_src`.
 The latter three directories all correspond to the source code, which has been separated from the experimental
 evaluation code. The experimental evaluation code is in the `Section_5_2`, `Section_5_3`, `Section_5_4`,
 and `Section_5_5` subdirectories.
@@ -51,7 +56,7 @@ and `Section_5_5` subdirectories.
 ## Validating Section 5.2 Experiments and Example
 
 To validate the robust sensitivity analysis of ODEs experiments from Section 5.2 of the paper, we will enter into
-the `Section_5_2` sub-directory. This can be done by running the following command:
+the `Section_5_2` subdirectory. This can be done by running the following command:
 
 > `cd ~/Desktop/artifact/Section_5_2`
 
@@ -123,6 +128,7 @@ The tabular form of the same result is presented in both CSV and HTML formats. W
 HTML format (using a browser such as firefox). This can be done using the following commands:
 
 > `firefox chemical_ode_table.html`
+
 > `firefox climate_ode_table.html`
 
 To clear all the experimental results (if one wishes to do a fresh rerun, perhaps after modifying some part of the
@@ -140,12 +146,13 @@ zonotope implementation. This directory can be accessed via the following comman
 
 > `cd ~/Desktop/artifact/forward_mode_non_tensorized_src/`
 
-A description of the source files and their functionality is provided in a separate document.
+A description of the source files and their functionality is provided in a separate
+document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.pdf).
 
 ## Validating Section 5.3 Experiments
 
 Here, we detail the steps needed to reproduce our Black-Scholes experimental results in Section 5.3 of the paper. We
-will first enter into the `Section_5_3` sub-directory. This can be done by running the following command:
+will first enter into the `Section_5_3` subdirectory. This can be done by running the following command:
 
 > `cd ~/Desktop/artifact/Section_5_3`
 
@@ -163,7 +170,7 @@ To view the results we recommend the following command:
 
 This plot shows the results as described in Fig. 6 of the paper.
 
-The same information presented in a tabular form can be found in the `data` sub-directory which can be accessed via the
+The same information presented in a tabular form can be found in the `data` subdirectory which can be accessed via the
 following command:
 
 > `cd ~/Desktop/artifact/Section_5_3/data/`
@@ -195,16 +202,17 @@ does not satisfy a tensorized structure and thus one cannot vectorize the zonoto
 reverse-mode since the Black-Scholes model has several inputs, but only a single output, meaning reverse-mode is more
 efficient in this case than forward mode.
 
-A complete description of the source files and their functionality is provided in a separate document.
+A complete description of the source files and their functionality is provided in a separate
+document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.pdf).
 
 ## Validating Section 5.4 Experiments
 
 Here, we detail the steps needed to reproduce our local Lipschitz robustness experimental results in Section 5.4 of the
-paper. We will first enter into the `Section_5_4` sub-directory. This can be done by running the following command
+paper. We will first enter into the `Section_5_4` subdirectory. This can be done by running the following command
 
 > `cd ~/Desktop/artifact/Section_5_4`
 
-Inside this sub-directory are the folders containing the trained networks, as well as the MNIST image data and lastly,
+Inside this subdirectory are the folders containing the trained networks, as well as the MNIST image data and lastly,
 the scripts needed to run the experiments and plot the results.
 
 The full FFNN experiments can be run via the following command:
@@ -261,7 +269,7 @@ visualized.
 ### Source Code for Section 5.4 Experiments
 
 The source code that implements the abstractions used in Section 5.4 is given in the `forward_mode_tensorized_src`
-sub-directory which is accessible with the following command:
+subdirectory which is accessible with the following command:
 
 > `cd ~/Desktop/artifact/forward_mode_tensorized_src/`
 
@@ -270,7 +278,8 @@ abstractly interpreting neural networks can be implemented in a vectorized manne
 benchmarks, we offer this additional implementation of our abstraction which uses tensor-level operations (such as for
 the linear regression or root solving that Pasado performs) that is tailored to the structure of DNNs.
 
-A full description of the source code is provided in separate documentation.
+A full description of the source code is provided in separate
+documentation [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.pdf).
 
 ### Exploring the Network Architectures
 
@@ -291,7 +300,7 @@ the `trained` directory.
 ## Validating Section 5.5 Experiments
 
 Here, we detail the steps needed to reproduce our Adult Income experimental results in Section 5.5 of the paper. We will
-first enter into the `Section_5_5` sub-directory. This can be done by running the following command:
+first enter into the `Section_5_5` subdirectory. This can be done by running the following command:
 
 > `cd ~/Desktop/artifact/Section_5_5`
 
@@ -335,6 +344,7 @@ This naming convention follows from the fact that this code is reverse-mode AD, 
 abstraction (specifically the zonotopes) is not tensorized. This code is reverse-mode since the Adult Income model has
 several inputs, but only a single output, meaning reverse mode is more efficient in this case than forward mode.
 
-A complete description of the source files and their functionality is provided in a separate document.
+A complete description of the source files and their functionality is provided in a separate
+document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.pdf).
 
 
