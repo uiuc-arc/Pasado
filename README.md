@@ -53,6 +53,18 @@ The latter three directories all correspond to the source code, which has been s
 evaluation code. The experimental evaluation code is in the `Section_5_2`, `Section_5_3`, `Section_5_4`,
 and `Section_5_5` subdirectories.
 
+## Get Started
+
+To get started, please clone this repository from GitHub and move into its directory by running the following commands
+in your terminal:
+
+```bash
+git clone https://github.com/uiuc-arc/Pasado.git
+cd Pasado
+```
+
+The instructions that follow assume that the reader is now in the `Pasado` directory.
+
 ## Validating Section 5.2 Experiments and Example
 
 To validate the robust sensitivity analysis of ODEs experiments from Section 5.2 of the paper, we will enter into
