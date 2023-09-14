@@ -53,7 +53,7 @@ The latter three directories all correspond to the source code, which has been s
 evaluation code. The experimental evaluation code is in the `Section_5_2`, `Section_5_3`, `Section_5_4`,
 and `Section_5_5` subdirectories.
 
-## Get Started
+## Getting Started
 
 To get started, please clone this repository from GitHub and move into its directory by running the following commands
 in your terminal:
