@@ -47,7 +47,7 @@ IPython: 8.14.0 (should also work for 5.8.0 or greater)
 
 ## Directory Structure
 
-The main directory is:  `~/Desktop/artifact`. Inside the `artifact` folder are the following
+Inside the main directory `Pasado` are the following
 subdirectories: `Section_5_2`, `Section_5_3`,  `Section_5_4`, `Section_5_5`, `forward_mode_non_tensorized_src`, `forward_mode_tensorized_src`, `reverse_mode_non_tensorized_src`.
 The latter three directories all correspond to the source code, which has been separated from the experimental
 evaluation code. The experimental evaluation code is in the `Section_5_2`, `Section_5_3`, `Section_5_4`,
