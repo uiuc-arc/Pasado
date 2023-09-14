@@ -27,34 +27,23 @@ document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.
 
 ## Requirements
 
-The artifact is built on the following requirements:
+This artifact is built on the following requirements:
 
-Python: 3.10.6 (should also work for 3.9 or greater)
-
-Numpy: 1.25.1 (should also work with 1.19.5 or greater)
-
-Affapy: 0.1
-
-Scikit-learn: 1.3.0 (should also work with 0.24.2 or greater)
-
-Seaborn: 0.12.2  (should also work for 0.11.2 or greater)
-
-MatPlotLib: 3.7.2 (should also work for 3.7.1)
-
-tabulate: 0.9.0
-
-tqdm: 4.65.0
-
-PyTorch: 2.0.1+cpu (should also work for 1.9.0 or greater. Should also work with GPU, however for resource limitations
-we only run CPU on the VM)
-
-Torchaudio: 2.0.2+cpu (should also work for 0.13.1 or greater)
-
-Torchvision: 0.15.2+cpu (should also work for 0.14.1 or greater)
-
-Jupyter Notebook: 6.5.4 (should also work with 5.7.11 or greater)
-
-IPython: 8.14.0 (should also work for 5.8.0 or greater)
+| Library              | Required Version | Possibly Compatible Versions | Notes                      |
+|----------------------|------------------|------------------------------|----------------------------|
+| **Python**           | 3.10.6           | 3.9 or greater               |                            |
+| **Numpy**            | 1.25.1           | 1.19.5 or greater            |                            |
+| **Affapy**           | 0.1              |                              |                            |
+| **Scikit-learn**     | 1.3.0            | 0.24.2 or greater            |                            |
+| **Seaborn**          | 0.12.2           | 0.11.2 or greater            |                            |
+| **MatPlotLib**       | 3.7.2            | 3.7.1 or greater             |                            |
+| **tabulate**         | 0.9.0            |                              |                            |
+| **tqdm**             | 4.65.0           |                              |                            |
+| **PyTorch**          | 2.0.1+cpu        | 1.9.0 or greater             | Should also work with GPU. |
+| **Torchaudio**       | 2.0.2+cpu        | 0.13.1 or greater            |                            |
+| **Torchvision**      | 0.15.2+cpu       | 0.14.1 or greater            |                            |
+| **Jupyter Notebook** | 6.5.4            | 5.7.11 or greater            |                            |
+| **IPython**          | 8.14.0           | 5.8.0 or greater             |                            |
 
 ## Directory Structure
 
