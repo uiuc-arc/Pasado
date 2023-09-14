@@ -59,7 +59,7 @@ To validate the robust sensitivity analysis of ODEs experiments from Section 5.2
 the `Section_5_2` subdirectory. This can be done by running the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_2
+cd Section_5_2
 ```
 
 Inside this directory are the experiments for performing robust AD-based sensitivity analysis of ODE solutions. The two
@@ -75,7 +75,7 @@ To run the experiments for the climate model run the `climate.sh` file using the
 The results can be visualized by going into the `img` directory with the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_2/img/
+cd Section_5_2/img
 ```
 
 To view these figures we recommend the following commands:
@@ -92,7 +92,7 @@ To validate the Chemical ODE robust AD-based sensitivity analysis, we now exit t
 the `Section_5_2` directory using the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_2
+cd Section_5_2
 ```
 
 And then to actually run the Chemical ODE experiment, we run the following command:
@@ -115,7 +115,7 @@ of `./chemical.sh -l`.
 The results can be visualized by again going into the `img` directory with the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_2/img/
+cd Section_5_2/img
 ```
 
 To view the figures for the chemical ODE experimental results, we recommend the following commands:
@@ -139,7 +139,7 @@ Furthermore, the same information presented in a tabular form can be found in th
 accessed via the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_2/data/
+cd Section_5_2/data
 ```
 
 The tabular form of the same result is presented in both CSV and HTML formats. We recommend viewing the results in the
@@ -166,7 +166,7 @@ standard DNNs, these ODE solver computations do not satisfy a tensorized structu
 zonotope implementation. This directory can be accessed via the following command:
 
 ```bash
-cd ~/Desktop/artifact/forward_mode_non_tensorized_src/
+cd forward_mode_non_tensorized_src
 ```
 
 A description of the source files and their functionality is provided in a separate
@@ -178,7 +178,7 @@ Here, we detail the steps needed to reproduce our Black-Scholes experimental res
 will first enter into the `Section_5_3` subdirectory. This can be done by running the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_3
+cd Section_5_3
 ```
 
 To run the experiments for the Black-Scholes model, run the `black_scholes.sh` file using the following command:
@@ -190,7 +190,7 @@ To run the experiments for the Black-Scholes model, run the `black_scholes.sh` f
 The results can be visualized by going into the `img` directory with the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_3/img/
+cd Section_5_3/img
 ```
 
 To view the results we recommend the following command:
@@ -205,7 +205,7 @@ The same information presented in a tabular form can be found in the `data` subd
 following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_3/data/
+cd Section_5_3/data
 ```
 
 The tabular form of the same result is presented in both CSV and HTML formats. We recommend viewing the results in the
@@ -232,7 +232,7 @@ The source code that implements the abstractions that are evaluated in the Secti
 the `reverse_mode_non_tensorized_src` directory.
 
 ```bash
-cd ~/Desktop/artifact/reverse_mode_non_tensorized_src/
+cd reverse_mode_non_tensorized_src
 ```
 
 This naming convention follows from the fact that this code is reverse-mode AD, but the implementation of the
@@ -250,7 +250,7 @@ Here, we detail the steps needed to reproduce our local Lipschitz robustness exp
 paper. We will first enter into the `Section_5_4` subdirectory. This can be done by running the following command
 
 ```bash
-cd ~/Desktop/artifact/Section_5_4
+cd Section_5_4
 ```
 
 Inside this subdirectory are the folders containing the trained networks, as well as the MNIST image data and lastly,
@@ -330,7 +330,7 @@ The source code that implements the abstractions used in Section 5.4 is given in
 subdirectory which is accessible with the following command:
 
 ```bash
-cd ~/Desktop/artifact/forward_mode_tensorized_src/
+cd forward_mode_tensorized_src
 ```
 
 Because neural networks have very specific structure (unlike general computations like in Black-Scholes or ODE solvers),
@@ -344,11 +344,11 @@ documentation [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documenta
 ### Exploring the Network Architectures
 
 This part is completely optional, however for the interested reader who wishes to explore the network architectures we
-used, the class definitions of the models can be found in `~/Desktop/artifact/Section_5_4/model.py`. Saved models
+used, the class definitions of the models can be found in `Section_5_4/model.py`. Saved models
 parameters (`model_*.pth`) can be found in the `trained` subdirectory, which is accessible via the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_4/trained
+cd Section_5_4/trained
 ```
 
 In the paper, we trained three FFNN networks with 3, 4, and 5 layers, with 100 neurons in each hidden layer, and a large
@@ -364,7 +364,7 @@ Here, we detail the steps needed to reproduce our Adult Income experimental resu
 first enter into the `Section_5_5` subdirectory. This can be done by running the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_5
+cd Section_5_5
 ```
 
 To run the experiments for the Adult Income model, run the `adult.sh` file using the following command:
@@ -376,7 +376,7 @@ To run the experiments for the Adult Income model, run the `adult.sh` file using
 The results can be visualized by going into the `img` directory with the following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_5/img/
+cd Section_5_5/img
 ```
 
 To view the results we recommend the following command:
@@ -391,7 +391,7 @@ The same information presented in a tabular form can be found in the `data` subd
 following command:
 
 ```bash
-cd ~/Desktop/artifact/Section_5_5/data/
+cd Section_5_5/data
 ```
 
 The tabular form of the same result is presented in both CSV and HTML formats. We recommend viewing the results in the
@@ -414,7 +414,7 @@ The source code that implements the abstractions that are evaluated in the Secti
 the `reverse_mode_non_tensorized_src` directory.
 
 ```bash
-cd ~/Desktop/artifact/reverse_mode_non_tensorized_src/
+cd reverse_mode_non_tensorized_src
 ```
 
 This naming convention follows from the fact that this code is reverse-mode AD, but the implementation of the
