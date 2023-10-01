@@ -395,25 +395,31 @@ if __name__ == '__main__':
 
     print("TESTING configurations: ", configurations)
 
-    start = time.time()
+    total_time_interval = 0
     for config in tqdm(configurations):
+        gc.collect()
+        start = time.time()
         regular_interval(*config)
+        end = time.time()
+        total_time_interval += (end - start)
+    print("Average time per configuration for Interval = ", total_time_interval / len(configurations))
 
-    end = time.time()
-    print("Interval = ", (end - start) / len(configurations))
-
-    start = time.time()
+    total_time_zonotope = 0
     for config in tqdm(configurations):
         Affine._weightCount = 1
+        gc.collect()
+        start = time.time()
         affine(*config)
+        end = time.time()
+        total_time_zonotope += (end - start)
+    print("Average time per configuration for Zonotope = ", total_time_zonotope / len(configurations))
 
-    end = time.time()
-    print("Zonotope = ", (end - start) / len(configurations))
-
-    start = time.time()
+    total_time_pasado = 0
     for config in tqdm(configurations):
         Affine._weightCount = 1
+        gc.collect()
+        start = time.time()
         mixed_affine_precise(*config)
-
-    end = time.time()
-    print("Pasado = ", (end - start) / len(configurations))
+        end = time.time()
+        total_time_pasado += (end - start)
+    print("Average time per configuration for Pasado = ", total_time_pasado / len(configurations))
