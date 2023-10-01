@@ -376,8 +376,6 @@ def mixed_affine_precise_split(eps_K, eps_S, eps_sigma, eps_tau, eps_r, n_splits
 
 
 if __name__ == '__main__':
-    n_test = 20
-
     eps_K_list = [1., 5., 10.]
     eps_S_list = [1., 5., 10.]
     eps_sigma_list = [0.5, 1., 2.]
