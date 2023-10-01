@@ -1,8 +1,9 @@
 import itertools
 import time
 import gc
-from tqdm import trange
+from tqdm import tqdm
 import sys
+
 sys.path.insert(1, '../reverse_mode_non_tensorized_src')
 from interval_rev import *
 from zono_rev import *
@@ -377,21 +378,42 @@ def mixed_affine_precise_split(eps_K, eps_S, eps_sigma, eps_tau, eps_r, n_splits
 if __name__ == '__main__':
     n_test = 20
 
-    # K, sigma, tau, S, r = affine(1, 1, 0.5, 0.001, 0.001)
+    eps_K_list = [1., 5., 10.]
+    eps_S_list = [1., 5., 10.]
+    eps_sigma_list = [0.5, 1., 2.]
+    eps_tau_list = [0.001, 0.01]
+    eps_r_list = [0.001]
+
+    configurations = []
+
+    for eps_K in eps_K_list:
+        for eps_S in eps_S_list:
+            for eps_sigma in eps_sigma_list:
+                for eps_tau in eps_tau_list:
+                    for eps_r in eps_r_list:
+                        configurations.append((eps_K, eps_S, eps_sigma, eps_tau, eps_r))
+
+    print("TESTING configurations: ", configurations)
 
     start = time.time()
+    for config in tqdm(configurations):
+        regular_interval(*config)
 
-    for _ in trange(n_test):
-        # regular_interval(1, 1, 0.5, 0.001, 0.001)
-        # affine(1, 1, 0.5, 0.001, 0.001)
-        mixed_affine_precise(1, 1, 0.5, 0.001, 0.001)
-        gc.collect()
-
-    # print(regular_interval(1, 1, 0.5, 0.001, 0.001))
-    # print(affine(1, 1, 0.5, 0.001, 0.001))
-    # print(affine_precise(1, 1, 0.5, 0.001, 0.001))
-    # print(mixed_affine(1, 1, 0.5, 0.001, 0.001))
-    # print(mixed_affine_precise(1, 1, 0.5, 0.001, 0.001))
-    # print(analytical(100., 105., 5., 30. / 365., 0.0125))
     end = time.time()
-    print("Runtime = ", end - start)
+    print("Interval = ", (end - start) / len(configurations))
+
+    start = time.time()
+    for config in tqdm(configurations):
+        Affine._weightCount = 1
+        affine(*config)
+
+    end = time.time()
+    print("Zonotope = ", (end - start) / len(configurations))
+
+    start = time.time()
+    for config in tqdm(configurations):
+        Affine._weightCount = 1
+        mixed_affine_precise(*config)
+
+    end = time.time()
+    print("Pasado = ", (end - start) / len(configurations))
