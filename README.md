@@ -27,7 +27,7 @@ document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.
 
 ## Requirements
 
-This artifact was originally built against the versions below and later re-tested on against a newer stack. 
+This artifact was originally built against the versions below and later re-tested against a newer stack.
 A [`requirements.txt`](requirements.txt) with `>=` lower bounds is provided.
 
 | Library          | Original Version | Re-tested Version | Minimum            | Notes             |
