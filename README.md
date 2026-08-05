@@ -27,9 +27,8 @@ document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.
 
 ## Requirements
 
-This artifact was originally built against the versions below. It was re-tested on
-2026-07-06 against a much newer stack (Python 3.13.3). A [`requirements.txt`](requirements.txt)
-with `>=` lower bounds is also provided.
+This artifact was originally built against the versions below and later re-tested on against a newer stack. 
+A [`requirements.txt`](requirements.txt) with `>=` lower bounds is provided.
 
 | Library          | Original Version | Re-tested Version | Minimum            | Notes             |
 |------------------|-------------------|--------------------|---------------------|-------------------|
