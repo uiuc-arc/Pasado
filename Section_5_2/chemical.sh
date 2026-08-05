@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PYTHONPATH="$(cd "$(dirname "$0")/../forward_mode_non_tensorized_src" && pwd):$PYTHONPATH"
+
 mkdir -p img data
 l_flag=0
 f_flag=0
