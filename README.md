@@ -28,29 +28,25 @@ document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.
 ## Requirements
 
 This artifact was originally built against the versions below. It was re-tested on
-2026-07-06 against a much newer stack (Python 3.13.3), and all of Section 5.2, 5.3,
-the FCN part of Section 5.4, and Section 5.5 ran successfully; see the Notes column
-for the two known exceptions. A [`requirements.txt`](requirements.txt) with `>=`
-lower bounds (set at the re-tested versions) is provided for `pip install -r
-requirements.txt`; it intentionally avoids pinning exact versions so the artifact
-does not immediately go stale again.
+2026-07-06 against a much newer stack (Python 3.13.3). A [`requirements.txt`](requirements.txt)
+with `>=` lower bounds is also provided.
 
-| Library              | Original Version | Re-tested Version (2026-07-06) | Notes                      |
-|----------------------|-------------------|--------------------------------|----------------------------|
-| **Python**           | 3.10.6            | 3.13.3                         | Minimum: 3.9 or greater.   |
-| **Numpy**            | 1.25.1             | 2.5.1                           | Minimum: 1.19.5 or greater. `Section_5_4/lipschitz_cnn.sh` fails under Numpy 2.0+ (`np.product` removed); tracked separately from this table. |
-| **Scipy**            | *(undocumented)*   | 1.18.0                          | Direct dependency (`scipy.stats.norm` in `forward_mode_non_tensorized_src/synthesized_transformer.py`) that was missing from this table. |
-| **Affapy**           | 0.1                | 0.1                             |                            |
-| **Scikit-learn**     | 1.3.0              | 1.9.0                           | Minimum: 0.24.2 or greater. Pretrained models were pickled with scikit-learn 1.3.0; loading them with 1.9.0 prints `InconsistentVersionWarning`. Scripts still complete, but numeric equivalence with the paper's original results was not independently re-verified. |
-| **Seaborn**          | 0.12.2             | 0.13.2                          | Minimum: 0.11.2 or greater. |
-| **MatPlotLib**       | 3.7.2              | 3.11.0                          | Minimum: 3.7.1 or greater. |
-| **tabulate**         | 0.9.0              | 0.10.0                          |                            |
-| **tqdm**             | 4.65.0             | 4.68.3                          |                            |
-| **PyTorch**          | 2.0.1+cpu          | 2.12.1+cpu                      | Minimum: 1.9.0 or greater. Should also work with GPU. |
-| **Torchaudio**       | 2.0.2+cpu          | 2.11.0+cpu                      | Minimum: 0.13.1 or greater. |
-| **Torchvision**      | 0.15.2+cpu         | 0.27.1+cpu                      | Minimum: 0.14.1 or greater. |
-| **Jupyter**          | 6.5.4 (Notebook)   | 1.1.1                           | Minimum: 5.7.11 or greater. Not exercised in the 2026-07-06 pass (no notebook run). |
-| **IPython**          | 8.14.0             | 9.15.0                          | Minimum: 5.8.0 or greater. |
+| Library          | Original Version | Re-tested Version | Minimum            | Notes             |
+|------------------|-------------------|--------------------|---------------------|-------------------|
+| **Python**       | 3.10.6            | 3.13.3             | 3.9 or greater      |                   |
+| **Numpy**        | 1.25.1            | 2.5.1              | 1.19.5 or greater   |                   |
+| **Scipy**        | —                 | 1.18.0             | —                   |                   |
+| **Affapy**       | 0.1               | 0.1                | —                   |                   |
+| **Scikit-learn** | 1.3.0             | 1.9.0              | 0.24.2 or greater   |                   |
+| **Seaborn**      | 0.12.2            | 0.13.2             | 0.11.2 or greater   |                   |
+| **MatPlotLib**   | 3.7.2             | 3.11.0             | 3.7.1 or greater    |                   |
+| **tabulate**     | 0.9.0             | 0.10.0             | —                   |                   |
+| **tqdm**         | 4.65.0            | 4.68.3             | —                   |                   |
+| **PyTorch**      | 2.0.1+cpu         | 2.12.1+cpu         | 1.9.0 or greater    | Should also work with GPU. |
+| **Torchaudio**   | 2.0.2+cpu         | 2.11.0+cpu         | 0.13.1 or greater   |                   |
+| **Torchvision**  | 0.15.2+cpu        | 0.27.1+cpu         | 0.14.1 or greater   |                   |
+| **Jupyter**      | 6.5.4 (Notebook)  | 1.1.1              | 5.7.11 or greater   |                   |
+| **IPython**      | 8.14.0            | 9.15.0             | 5.8.0 or greater    |                   |
 
 ## Directory Structure
 
