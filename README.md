@@ -27,23 +27,25 @@ document [here](https://github.com/uiuc-arc/Pasado/blob/main/Code_Documentation.
 
 ## Requirements
 
-This artifact is built on the following requirements:
+This artifact was originally built against the versions below and later re-tested against a newer stack.
+A [`requirements.txt`](requirements.txt) with `>=` lower bounds is provided.
 
-| Library              | Required Version | Possibly Compatible Versions | Notes                      |
-|----------------------|------------------|------------------------------|----------------------------|
-| **Python**           | 3.10.6           | 3.9 or greater               |                            |
-| **Numpy**            | 1.25.1           | 1.19.5 or greater            |                            |
-| **Affapy**           | 0.1              |                              |                            |
-| **Scikit-learn**     | 1.3.0            | 0.24.2 or greater            |                            |
-| **Seaborn**          | 0.12.2           | 0.11.2 or greater            |                            |
-| **MatPlotLib**       | 3.7.2            | 3.7.1 or greater             |                            |
-| **tabulate**         | 0.9.0            |                              |                            |
-| **tqdm**             | 4.65.0           |                              |                            |
-| **PyTorch**          | 2.0.1+cpu        | 1.9.0 or greater             | Should also work with GPU. |
-| **Torchaudio**       | 2.0.2+cpu        | 0.13.1 or greater            |                            |
-| **Torchvision**      | 0.15.2+cpu       | 0.14.1 or greater            |                            |
-| **Jupyter Notebook** | 6.5.4            | 5.7.11 or greater            |                            |
-| **IPython**          | 8.14.0           | 5.8.0 or greater             |                            |
+| Library          | Original Version | Re-tested Version | Minimum            | Notes             |
+|------------------|-------------------|--------------------|---------------------|-------------------|
+| **Python**       | 3.10.6            | 3.13.3             | 3.9 or greater      |                   |
+| **Numpy**        | 1.25.1            | 2.5.1              | 1.19.5 or greater   |                   |
+| **Scipy**        | —                 | 1.18.0             | —                   |                   |
+| **Affapy**       | 0.1               | 0.1                | —                   |                   |
+| **Scikit-learn** | 1.3.0             | 1.9.0              | 0.24.2 or greater   |                   |
+| **Seaborn**      | 0.12.2            | 0.13.2             | 0.11.2 or greater   |                   |
+| **MatPlotLib**   | 3.7.2             | 3.11.0             | 3.7.1 or greater    |                   |
+| **tabulate**     | 0.9.0             | 0.10.0             | —                   |                   |
+| **tqdm**         | 4.65.0            | 4.68.3             | —                   |                   |
+| **PyTorch**      | 2.0.1+cpu         | 2.12.1+cpu         | 1.9.0 or greater    | Should also work with GPU. |
+| **Torchaudio**   | 2.0.2+cpu         | 2.11.0+cpu         | 0.13.1 or greater   |                   |
+| **Torchvision**  | 0.15.2+cpu        | 0.27.1+cpu         | 0.14.1 or greater   |                   |
+| **Jupyter**      | 6.5.4 (Notebook)  | 1.1.1              | 5.7.11 or greater   |                   |
+| **IPython**      | 8.14.0            | 9.15.0             | 5.8.0 or greater    |                   |
 
 ## Directory Structure
 

@@ -1,0 +1,17 @@
+# Tested with Python 3.13.3 on Windows 11 (2026-07-06). Lower bounds are used
+# instead of pinned versions so the artifact does not immediately break again
+# as new releases come out; see the Requirements table in README.md for the
+# exact versions that were tested against.
+numpy>=2.5.1
+scipy>=1.18.0
+affapy>=0.1
+scikit-learn>=1.9.0
+seaborn>=0.13.2
+matplotlib>=3.11.0
+tabulate>=0.10.0
+tqdm>=4.68.3
+torch>=2.12.1
+torchvision>=0.27.1
+torchaudio>=2.11.0
+jupyter>=1.1.1
+ipython>=9.15.0
