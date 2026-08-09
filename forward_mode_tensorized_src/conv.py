@@ -35,7 +35,7 @@ def torch_conv_layer_to_affine(
     in_shape = (conv.in_channels, w, h)
     out_shape = (conv.out_channels, output_size[0], output_size[1])
 
-    fc = nn.Linear(in_features=np.product(in_shape), out_features=np.product(out_shape))
+    fc = nn.Linear(in_features=np.prod(in_shape), out_features=np.prod(out_shape))
     fc.weight.data.fill_(0.0)
 
     # Output coordinates

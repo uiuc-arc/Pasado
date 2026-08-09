@@ -1,3 +1,5 @@
+import re
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -17,10 +19,16 @@ matplotlib.rcParams.update({
 
 df = pd.read_csv('results/adult.csv', header=None)
 
+def parse_third_int(t):
+    # Robust to both plain ints ("25") and NumPy >=2.0 scalar reprs
+    # ("np.int64(25)") in the third element of the stringified tuple.
+    return int(re.search(r"-?\d+", t.split(",")[2]).group())
+
+
 epsilons = df[0].values
-intervals = [int(t.split(",")[2].strip(")")) for t in df[1].values]
-zonotopes = [int(t.split(",")[2].strip(")")) for t in df[2].values]
-pasados = [int(t.split(",")[2].strip(")")) for t in df[3].values]
+intervals = [parse_third_int(t) for t in df[1].values]
+zonotopes = [parse_third_int(t) for t in df[2].values]
+pasados = [parse_third_int(t) for t in df[3].values]
 
 mask = epsilons <= 0.8
 epsilons = epsilons[mask]
