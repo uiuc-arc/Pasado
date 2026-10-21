@@ -114,7 +114,7 @@ class Zonotope:
 
     # tested - works
     def __neg__(self):
-        return Zonotope(-self.centers, self.generators)
+        return Zonotope(-self.centers, -self.generators)
 
         # tested - works
 
@@ -367,7 +367,7 @@ class DualZonotope:
         return -self + other
 
     def __neg__(self):
-        return DualZonotope(-self.real.centers, self.real.generators, -self.dual.centers, self.dual.generators)
+        return DualZonotope(-self.real.centers, -self.real.generators, -self.dual.centers, -self.dual.generators)
 
     def __mul__(self, other):
         if isinstance(other, (int, float)):
