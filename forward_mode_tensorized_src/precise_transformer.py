@@ -264,7 +264,7 @@ def check_nonlinear_boundary(lx, ux, ly, uy, ABCs):
     maxs = []
     for i in range(lx.size()[0]):
 
-        evaluation = objective_fn(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_paired_stacked[i])
+        evaluation = objective_fn(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_paired_stacked[i]).abs()
         evaluation = torch.nan_to_num(evaluation, -float("Inf"))
         maxs.append((torch.max(evaluation)))
 
@@ -287,7 +287,7 @@ def check_nonlinear_boundary(lx, ux, ly, uy, ABCs):
     maxs_uy = []
     for i in range(lx.size()[0]):
 
-        evaluation_uy = objective_fn(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_uy_paired_stacked[i])
+        evaluation_uy = objective_fn(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_uy_paired_stacked[i]).abs()
         evaluation_uy = torch.nan_to_num(evaluation_uy, -float("Inf"))
         maxs_uy.append((torch.max(evaluation_uy)))
 
@@ -324,7 +324,7 @@ def check_nonlinear_boundary_softplus(lx, ux, ly, uy, ABCs):
     maxs = []
     for i in range(lx.size()[0]):
 
-        evaluation = objective_fn_softplus(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_paired_stacked[i])
+        evaluation = objective_fn_softplus(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_paired_stacked[i]).abs()
         evaluation = torch.nan_to_num(evaluation, -float("Inf"))
         maxs.append((torch.max(evaluation)))
 
@@ -345,7 +345,7 @@ def check_nonlinear_boundary_softplus(lx, ux, ly, uy, ABCs):
     maxs_uy = []
     for i in range(lx.size()[0]):
 
-        evaluation_uy = objective_fn_softplus(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_uy_paired_stacked[i])
+        evaluation_uy = objective_fn_softplus(ABCs[i][0], ABCs[i][1], ABCs[i][2], roots_uy_paired_stacked[i]).abs()
         evaluation_uy = torch.nan_to_num(evaluation_uy, -float("Inf"))
         maxs_uy.append((torch.max(evaluation_uy)))
 
